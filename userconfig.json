@@ -1,0 +1,15 @@
+{
+  "devPositions": [
+    "Front-End",
+    "Back-End"
+  ],
+  "keywords": [
+    "React",
+    "Angular",
+    "Django",
+    "Flask",
+    "Spring"
+  ],
+  "remote": "Either",
+  "zipCode": "33333"
+}
