@@ -1,6 +1,16 @@
 const { userProfile } = require("./Profile");
-const browserObject = require("./browser");
+const { findZip } = require("./convertZip");
+const { findJob } = require("./findJob");
 
+var nameOfCityAndState;
 userProfile.then((res) => {
-  browserObject.startBrowser();
+  const zipcode = res.zipCode;
+  const language = res.keywords;
+  nameOfCityAndState = findZip(zipcode);
+  search(nameOfCityAndState);
+
+  //browserObject.startBrowser(zipcode);
 });
+const search = async (nameOfCityAndState) => {
+  const test = await findJob(nameOfCityAndState);
+};
